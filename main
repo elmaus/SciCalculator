@@ -1,0 +1,22 @@
+
+import tkinter as tk
+
+class Application(tk.Tk):
+	def __init__(self, *args, **kwargs):
+		tk.Tk.__init__(self)
+		self.title('Scientific Calculator')
+		self.geometry('400x700')
+		self.shift = False
+
+		self.display = tk.Entry(self, bd=10, bg='grey', width=60)
+		self.display.pack(pady=15)
+
+		self.btn = tk.Button(self, text="BUTTON")
+		self.btn.pack()
+
+if __name__ == '__main__':
+	app = Application()
+	app.mainloop()
+
+
+
